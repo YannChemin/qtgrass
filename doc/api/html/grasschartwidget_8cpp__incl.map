@@ -1,0 +1,21 @@
+<map id="src/profile/grasschartwidget.cpp" name="src/profile/grasschartwidget.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="347,5,577,31"/>
+<area shape="rect" id="Node000002" href="$grasschartwidget_8h.html" title=" " alt="" coords="71,79,218,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,33,210,78,208,73,410,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="242,79,319,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="434,33,324,76,322,71,432,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="344,79,449,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="453,33,418,70,415,67,449,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="473,79,581,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="475,29,509,67,506,70,471,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="605,79,668,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="491,28,596,71,594,76,489,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="693,79,778,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="507,28,680,73,679,78,505,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,84,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,106,74,146,71,142,127,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="108,152,181,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="147,104,147,138,142,138,142,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="206,152,262,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="161,102,210,141,207,145,157,106"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="src/grassicons.h" name="src/grassicons.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="66,5,193,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,64,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,33,63,72,60,68,113,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,170,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,31,132,65,127,65,127,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="194,79,265,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,29,203,68,200,73,144,33"/>
+</map>

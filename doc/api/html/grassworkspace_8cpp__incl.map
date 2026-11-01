@@ -1,0 +1,15 @@
+<map id="src/workspace/grassworkspace.cpp" name="src/workspace/grassworkspace.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="158,5,409,31"/>
+<area shape="rect" id="Node000002" href="$grassworkspace_8h.html" title="Parser for GRASS GIS workspace files (.gxw)." alt="" coords="55,79,194,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,33,164,75,162,71,257,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="218,79,349,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="286,31,286,65,281,65,281,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="373,79,428,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="304,28,371,69,368,74,301,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,65,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,106,62,145,59,141,109,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="89,152,160,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="127,104,127,138,122,138,122,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="184,152,257,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="142,102,195,141,192,146,139,106"/>
+</map>

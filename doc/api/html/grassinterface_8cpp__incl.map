@@ -1,0 +1,15 @@
+<map id="src/grassinterface.cpp" name="src/grassinterface.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="187,5,352,31"/>
+<area shape="rect" id="Node000002" href="$grassinterface_8h.html" title="Thin Qt&#45;only replacement for QgisInterface used by ported GRASS plugin code." alt="" coords="45,79,171,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,33,148,75,146,71,242,28"/>
+<area shape="rect" id="Node000005" href="$grassmessagebar_8h.html" title="Horizontal notification bar with stacked message queue." alt="" coords="195,79,343,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="272,31,272,65,267,65,267,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="367,79,510,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="298,28,399,71,397,76,296,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,106,64,144,61,140,95,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,152,175,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="116,103,132,139,127,141,111,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="230,152,309,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="272,104,272,138,267,138,267,104"/>
+</map>

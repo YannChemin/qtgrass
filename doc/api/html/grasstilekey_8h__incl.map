@@ -1,0 +1,5 @@
+<map id="src/tiles/grasstilekey.h" name="src/tiles/grasstilekey.h">
+<area shape="rect" id="Node000001" title="Unique identifier for a slippy&#45;map XYZ tile." alt="" coords="5,5,172,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,31,91,65,86,65,86,31"/>
+</map>

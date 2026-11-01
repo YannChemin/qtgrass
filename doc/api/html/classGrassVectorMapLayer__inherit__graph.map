@@ -1,0 +1,5 @@
+<map id="GrassVectorMapLayer" name="GrassVectorMapLayer">
+<area shape="rect" id="Node000001" title="Renders a GRASS vector map using the GRASS C Vector API." alt="" coords="5,79,169,104"/>
+<area shape="rect" id="Node000002" href="$classGrassMapLayer.html" title="Abstract base class for anything the map canvas can render." alt="" coords="26,5,149,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,44,90,79,85,79,85,44"/>
+</map>

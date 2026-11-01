@@ -1,0 +1,5 @@
+version=4
+# qtgrass is a native package developed alongside GRASS GIS.
+# Upstream releases are tagged in the local git repository.
+opts=mode=git,gitmode=tags \
+  https://github.com/osgeo/grass .*/v?(\d[\d.]*)$

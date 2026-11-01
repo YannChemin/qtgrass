@@ -1,0 +1,63 @@
+# Doxyfile — qtgrass API documentation
+# Generate with:  cmake --build build/ --target doxy
+# or directly:    doxygen Doxyfile
+
+PROJECT_NAME           = "qtgrass"
+PROJECT_BRIEF          = "Qt6 native GUI for GRASS GIS"
+PROJECT_NUMBER         = ""
+
+OUTPUT_DIRECTORY       = doc/api
+
+RECURSIVE              = YES
+INPUT                  = src/
+
+# Only process C++ headers and sources — exclude generated moc/ui files
+FILE_PATTERNS          = *.h *.cpp
+EXCLUDE_PATTERNS       = */moc_* */.moc/* */ui_* */OBJ*
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# Qt-compatible comment style (/*! */ and /** */)
+JAVADOC_AUTOBRIEF      = NO
+QT_AUTOBRIEF           = YES
+MULTILINE_CPP_IS_BRIEF = NO
+
+# Source browser
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+
+# Cross-references
+REFERENCES_RELATION    = YES
+REFERENCED_BY_RELATION = YES
+
+# Graph generation (requires Graphviz dot)
+HAVE_DOT               = YES
+DOT_GRAPH_MAX_NODES    = 50
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+COLLABORATION_GRAPH    = YES
+
+# Output formats
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_COLORSTYLE        = DARK
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+
+# Preprocessor — let Doxygen see GRASS macro expansions
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+PREDEFINED             = Q_OBJECT= \
+                         Q_SIGNALS=signals \
+                         Q_SLOTS=slots \
+                         Q_EMIT=emit
+
+# Warnings — treat undocumented entities as warnings in CI
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_NO_PARAMDOC       = NO
+QUIET                  = YES

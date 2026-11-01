@@ -1,0 +1,7 @@
+<map id="GrassFileParam" name="GrassFileParam">
+<area shape="rect" id="Node000001" title="File or directory picker parameter widget." alt="" coords="17,152,140,177"/>
+<area shape="rect" id="Node000002" href="$classGrassParamWidget.html" title="Abstract base for all parameter input widgets in GrassModuleDialog." alt="" coords="5,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,118,81,152,76,152,76,118"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="39,5,118,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,44,81,79,76,79,76,44"/>
+</map>

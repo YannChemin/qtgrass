@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-grass-workspace">
+    <comment>GRASS GIS Workspace</comment>
+    <comment xml:lang="fr">Espace de travail GRASS GIS</comment>
+    <glob pattern="*.gxw"/>
+    <magic priority="50">
+      <match type="string" offset="0:64" value="&lt;gxw"/>
+    </magic>
+    <icon name="qtgrass"/>
+  </mime-type>
+</mime-info>

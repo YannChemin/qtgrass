@@ -1,0 +1,17 @@
+<map id="src/georect/grassgcpcanvas.h" name="src/georect/grassgcpcanvas.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="269,5,483,31"/>
+<area shape="rect" id="Node000002" href="$grassgcpcanvas_8cpp.html" title=" " alt="" coords="5,79,235,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,37,162,81,161,76,321,32"/>
+<area shape="rect" id="Node000003" href="$grassgeorectdialog_8h.html" title=" " alt="" coords="259,79,493,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,44,379,79,373,79,373,44"/>
+<area shape="rect" id="Node000006" href="$grasstrainingcanvas_8h.html" title=" " alt="" coords="517,79,763,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="432,32,598,76,597,81,431,37"/>
+<area shape="rect" id="Node000004" href="$grassgeorectdialog_8cpp.html" title=" " alt="" coords="51,152,301,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="332,111,210,154,208,149,330,106"/>
+<area shape="rect" id="Node000005" href="$grassapp_8cpp.html" title=" " alt="" coords="324,152,455,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="383,117,390,151,385,152,378,118"/>
+<area shape="rect" id="Node000007" href="$grassiclassdialog_8cpp.html" title=" " alt="" coords="505,152,748,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="638,118,631,152,626,151,633,117"/>
+<area shape="rect" id="Node000008" href="$grasstrainingcanvas_8cpp.html" title=" " alt="" coords="772,152,1033,177"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="696,105,861,149,859,154,695,110"/>
+</map>

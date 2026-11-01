@@ -1,0 +1,12 @@
+# GRASS GIS 8.6 is installed from source at /usr/local/grass86/; its shared
+# libraries are not tracked by the Debian package manager.  The RPATH pointing
+# there is intentional and correct for this build configuration.
+qtgrass binary: hardening-no-fortify-functions
+qtgrass binary: hardening-no-stackprotector
+
+# The binary RPATH includes /usr/local/grass86/lib which is non-standard but
+# required because GRASS is built from source, not installed as a Debian pkg.
+qtgrass binary: custom-library-search-path /usr/local/grass86/lib
+
+# GRASS shared libraries have no dpkg-shlibdeps metadata; this is expected.
+qtgrass binary: package-not-in-control-file

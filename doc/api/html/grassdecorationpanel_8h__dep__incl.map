@@ -1,0 +1,7 @@
+<map id="src/canvas/grassdecorationpanel.h" name="src/canvas/grassdecorationpanel.h">
+<area shape="rect" id="Node000001" title="Panel widget for enabling and configuring map decorations." alt="" coords="148,5,395,31"/>
+<area shape="rect" id="Node000002" href="$grassdecorationpanel_8cpp.html" title=" " alt="" coords="5,79,268,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,39,160,81,157,76,236,35"/>
+<area shape="rect" id="Node000003" href="$grasslayerpanel_8cpp.html" title=" " alt="" coords="293,79,519,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,35,385,76,383,81,304,39"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="src/module/grassxmlparser.h" name="src/module/grassxmlparser.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="113,5,323,31"/>
+<area shape="rect" id="Node000002" href="$grassmoduledesc_8h.html" title="Plain&#45;data structs carrying the parsed GRASS module XML interface description." alt="" coords="32,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,33,138,73,135,69,199,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,152,248,177"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="220,31,216,138,211,138,215,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="256,79,353,104"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="234,29,282,68,278,72,230,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,60,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,106,56,144,53,140,92,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,152,141,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="110,104,113,138,108,139,104,105"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="125,102,185,142,182,147,122,106"/>
+</map>

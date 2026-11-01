@@ -1,0 +1,9 @@
+<map id="src/tiles/grasspreferencesdialog.h" name="src/tiles/grasspreferencesdialog.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,5,253,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,70,72,66,68,116,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="105,79,159,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,31,135,65,129,65,129,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="183,79,254,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,29,196,68,192,72,144,33"/>
+</map>

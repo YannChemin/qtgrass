@@ -1,0 +1,17 @@
+<map id="GrassLayoutItem" name="GrassLayoutItem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="184,129,317,155"/>
+<area shape="rect" id="Node000003" href="$classGrassLayoutImageItem.html" title=" " alt="" coords="381,5,556,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,117,311,77,336,57,364,40,392,28,394,33,367,44,339,61,314,81,274,121"/>
+<area shape="rect" id="Node000004" href="$classGrassLayoutLegendItem.html" title=" " alt="" coords="379,55,559,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,121,364,89,404,78,406,83,366,94,290,126"/>
+<area shape="rect" id="Node000005" href="$classGrassLayoutMapItem.html" title=" " alt="" coords="388,104,549,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="331,130,388,123,388,129,331,135"/>
+<area shape="rect" id="Node000006" href="$classGrassLayoutNorthArrowItem.html" title=" " alt="" coords="365,153,572,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="331,148,365,152,365,157,331,153"/>
+<area shape="rect" id="Node000007" href="$classGrassLayoutScaleBarItem.html" title=" " alt="" coords="373,203,564,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="291,158,366,189,406,200,405,205,364,194,289,163"/>
+<area shape="rect" id="Node000008" href="$classGrassLayoutTextItem.html" title=" " alt="" coords="389,252,549,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="274,163,314,202,339,222,367,238,395,249,393,254,364,243,336,226,311,206,270,167"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,129,136,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,139,184,139,184,145,150,145"/>
+</map>

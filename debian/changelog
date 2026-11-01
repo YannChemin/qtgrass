@@ -1,0 +1,748 @@
+qtgrass (0.5.8) unstable; urgency=low
+
+  * grassapp: remove duplicate identify result display from status bar and
+    message bar; result is now shown only via the canvas popup overlay near
+    the click point.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 00:00:00 +0000
+
+qtgrass (0.5.7) unstable; urgency=low
+
+  * grasslayertree: emit currentLayerChanged signal when tree selection
+    changes; wire to canvas setActiveLayerName() via GrassLayerPanel.
+  * grassmapcanvas: Identify tool now queries the selected layer in the
+    layer tree first; falls back to topmost visible raster (previously
+    incorrectly queried the bottommost raster).
+  * grassmapcanvas: showIdentifyPopup() implemented — dark overlay label
+    appears near the click point showing "layer = value", auto-hides after
+    5 seconds.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 00:00:00 +0000
+
+qtgrass (0.5.6) unstable; urgency=low
+
+  * grassdisplaycmd: grid default spacing changed from hardcoded "1000" to
+    "auto" — spacing is computed live from the viewport on every render
+    (≤10 lines per axis, nice 1/2/5×10ⁿ value).
+  * grassdecorationpanel: Grid settings dialog shows an "Auto" checkbox
+    (default on); unchecking it reveals a manual fixed-spacing spinbox.
+  * grassapp/grassworkspace: decorations (enabled state + all args) are now
+    saved to and restored from .gxw workspace files via a
+    <qtgrass-decorations> block inside <display>; ignored by wxPython.
+  * grassdecorationpanel: Legend font picker changed from QFontComboBox to
+    an editable QComboBox with a curated list of common system fonts plus
+    GRASS-specific names (romans, italic, greeks, cyrillic).
+  * grassdecorationpanel: add savedState()/restoreState() API for
+    workspace serialisation.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 16:00:00 +0000
+
+qtgrass (0.5.5) unstable; urgency=low
+
+  * grassdecorationpanel: wrap decoration rows in a QScrollArea with a fixed
+    height so all rows (Legend, Scale bar, North arrow, Grid, Text) are always
+    visible and reachable regardless of the layer panel height.
+  * grassmapcanvas: add native Qt painter implementation for d.text in
+    drawDecorationsNative() so the Text decoration renders on the canvas in
+    Direct render mode (at=x%,y%, align=, size=% frame ht, color, bgcolor,
+    font, bold, rotation).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 14:00:00 +0000
+
+qtgrass (0.5.4) unstable; urgency=low
+
+  * grassdecorationpanel: add Text decoration (d.text) — always rendered on
+    top of all other decorations; default centred near top as a map title;
+    configurable text, position (x/y %), alignment, font, size, bold,
+    rotation, foreground and optional background colour.
+  * grassdecorationpanel: grid spacing auto-computed as a nice 1/2/5×10ⁿ
+    value giving ≤10 grid lines per axis from the current viewport extent;
+    "Auto" button recomputes on demand; spacing field changed to QDoubleSpinBox.
+  * grasslayerprops: after r.null apply, invalidate tile cache and
+    scheduleRender() so null pixels appear transparent immediately without
+    restarting the application.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 12:00:00 +0000
+
+qtgrass (0.5.3) unstable; urgency=medium
+
+  * grassplanetarymenu.cpp: parse <description> as label fallback for Python
+    modules — g.parser emits <description> not <label>, so Python-based p.*
+    modules (p.in.astropedia) were shown as bare names in the Planetary menu
+    instead of their human-readable description.
+  * grassxmlparser.cpp: extend findModuleBin() to search addon paths
+    (GRASS_ADDON_PATH, ~/.grassN/addons/bin, /usr/lib/grass/addons/bin) in
+    addition to $GISBASE/bin and $GISBASE/scripts, so GrassModuleDialog can
+    launch p.in.astropedia and other addon modules correctly.
+  * grasslayerprops: convert both GrassRasterPropsDialog and
+    GrassVectorPropsDialog to QListWidget sidebar + QStackedWidget layout
+    (QGIS-style vertical tabs), replacing flat QTabWidget.
+  * grasslayerprops: raster — add Rendering tab (opacity slider linked to
+    canvas layer, color stretch shortcuts via r.colors with 23 presets).
+  * grasslayerprops: raster — add Null values tab (r.null setnull= and
+    null= with range expansion and output log).
+  * grasslayerprops: raster — add Categories tab (r.category display +
+    single-category label editor via stdin pipe).
+  * grasslayerprops: raster — replace General tab with Metadata (r.info).
+  * grasslayerprops: vector — add Fields tab (v.info -c column table with
+    Add/Rename/Drop column via v.db.* scripts; write actions gated on
+    active mapset).
+  * grasslayertree: double-click on layer name opens Properties dialog;
+    eye-column double-click is ignored; group double-click renames.
+  * grasslayertree: add "Query pixel value…" context-menu action for raster
+    layers, pre-filled with current cursor E/N (r.what).
+  * grassapp: fix histogram and color-table toolbar actions to always
+    target the topmost visible raster (via GrassLayerTree::topRasterRef()).
+  * grassdecorationpanel: grid decoration always drawn below scale bar,
+    north arrow, and legend.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 12 Jun 2026 00:00:00 +0000
+
+qtgrass (0.5.2) unstable; urgency=low
+
+  * Fix SIGSEGV in GrassTileBackground: guard GPJ_grass_to_wkt() with
+    semi-major axis check (a > 6,000,000 m) to skip non-Earth (Moon/Mars)
+    spherical CRS where the GRASS library has a heap-corruption bug with
+    +R_C PROJ notation.
+  * Fix body-mismatch crash: applyTileSettings() now detects the current
+    location's planetary body and skips tile layer creation when the saved
+    tile provider (e.g. OPM Moon basemap) targets a different body.  This
+    prevents GPJ_grass_to_osr() being called for a non-Earth CRS just
+    because a Moon tile setting was persisted from a previous session.
+  * Defer planetary menu scan via QTimer::singleShot(0): the scan now runs
+    in a clean event-loop tick, not synchronously inside openMapset(), which
+    prevents deep stack interaction with the GRASS setjmp/longjmp machinery.
+  * Guard applyMenuScrollLimits() against null QScreen at very early startup.
+  * Remove temporary diagnostic breadcrumbs added for crash investigation.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Tue, 27 May 2026 12:00:00 +0000
+
+qtgrass (0.5.1) unstable; urgency=low
+
+  * Fix IAU PROJ_INFO completeness: after g.proj creates a location from an
+    IAU_2015 (or any spherical body) SRID, fixupProjInfo() queries the PROJ 9
+    C API (proj_get_ellipsoid / proj_ellipsoid_get_parameters) for the
+    authoritative semi-major axis and eccentricity², then rewrites PROJ_INFO
+    with the required "a:" and "es:" keys that GRASS's G_gisinit() needs.
+    Without these GRASS emits "No ellipsoid info given in file" and crashes.
+  * Auto-repair existing locations: openMapset() now calls repairProjInfo()
+    on the location's PERMANENT directory every time a mapset is opened.
+    It reads PROJ_SRID (or falls back to PROJ_WKT) to reconstruct the
+    correct ellipsoid parameters via PROJ, then patches PROJ_INFO in-place.
+    Pre-existing broken locations (e.g. MarsMercator) are fixed transparently
+    on the first open after this update.
+  * Planetary menu scan deferred until session is open: scanAvailableModules()
+    now takes a QProcessEnvironment (from buildSubprocessEnv) so modules run
+    with a valid GISRC; scan runs by full path; GrassApp rebuilds the menu on
+    GrassEnv::mapsetChanged so it is populated after a session is selected.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Tue, 27 May 2026 00:00:00 +0000
+
+qtgrass (0.5.0) unstable; urgency=low
+
+  * IAU planetary CRS: launch wizard now lists all 2201 IAU_2015 CRS
+    (127 geodetic + 2074 projected), not just the 127 geodetic entries.
+    Column widths for Code and Name resize to content automatically.
+  * Planetary menu keyword-driven: menu builder now verifies kw[0]=="Planetary"
+    before adding a module; submenus are built entirely from kw[1] values
+    (dynamic, alphabetical) with only Import & Export pinned first.
+  * Startup wizard version header: title now shows "GRASS GIS v8.6.0dev —
+    qtgrass v0.5.0" below the main heading so the active versions are visible.
+  * Fix crash on Open Existing Mapset with projected CRS (MarsMercator etc.):
+    G_get_window()/G_set_window() inside openMapset() could call G_fatal_error()
+    which called exit(). Now guarded with G_fatal_longjmp(1)/setjmp so fatal
+    errors longjmp back instead of terminating; a warning is logged and the
+    session is still activated successfully.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Tue, 27 May 2026 00:00:00 +0000
+
+qtgrass (0.4.9) unstable; urgency=low
+
+  * Layer reorder re-render: dragging layers in the layer tree now
+    immediately re-stacks canvas layers and triggers a re-render.
+  * Auto-save workspace: File → Preferences → Auto-save Workspace submenu
+    with Enable/Disable toggle and configurable interval (default 1 min).
+    Auto-saves to default.gxw (PERMANENT) or default_<mapset>.gxw silently;
+    user's manually-saved .gxw is not overwritten (unless name matches).
+    Auto-save also fires on main window close when enabled.
+  * Startup wizard env-awareness: when launched from a GRASS terminal
+    (GISRC/GISDBASE/LOCATION_NAME/MAPSET defined), the workspace list is
+    filtered to the active location only; missing default.gxw is created
+    automatically and highlighted; "Loading with Mapset (no Workspace)"
+    button accepts the existing session without requiring a workspace file.
+  * Fix buildEllipsoid: non double value error: suppress non-fatal GDAL
+    errors emitted by GPJ_grass_to_wkt for non-Earth (Moon/Mars) CRS when
+    building the tile reprojection pipeline; result is identical but the
+    error no longer pollutes the log.
+  * Module dialog Optional tab: all flags (overwrite, verbose, quiet plus
+    module-specific flags) are now collected in a dedicated "Optional" tab
+    matching the wxPython convention; section tabs contain params only.
+  * Module dialog live command footer: a read-only monospace QLineEdit
+    below the tab widget shows the current command as the user parameterises
+    the module, always visible without switching to the Command tab.
+  * Module dialog map pickers: GRASS map parameters (raster, vector, group,
+    raster3d, temporal) now show an editable combo box populated via g.list
+    from the active mapset + PERMANENT; OS file parameters keep QFileDialog.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Mon, 26 May 2026 00:00:00 +0000
+
+qtgrass (0.4.8) unstable; urgency=low
+
+  * Planetary tile providers: Preferences → Satellite / Tile Layer dialog
+    now auto-detects the planetary body from the active location's CRS
+    (PERMANENT/PROJ_INFO file — name keyword + ellipsoid semi-major axis
+    fingerprint) and only offers providers for that body.
+    - Earth: Google Satellite/Maps/Terrain, OpenStreetMap, Esri Imagery/Topo,
+      Carto Light/Dark (unchanged).
+    - Moon: OPM Moon basemap v0.1, v0.2, hillshaded-albedo
+      (OpenPlanetaryMap, NASA LRO data).
+    - Mars: OPM Viking MDIM 2.1 global, Celestia shaded (16k),
+      MOLA grey / colour / hillshade / colour-no-shade
+      (OpenPlanetaryMap, NASA MOLA/Viking data).
+    - Other / unknown body: enable-checkbox and provider combo disabled
+      with an explanatory note; tile background stays off.
+  * Detected body is shown at the top of the dialog with an emoji (🌍 / 🌕
+    / 🔴) and the source ("auto-detected from CRS") so the user understands
+    why the provider list differs from before.
+  * TileProvider struct gained a PlanetaryBody body field; the master
+    kProviders catalogue is grouped by body and the dialog filters it at
+    open time and at body change.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 24 May 2026 10:00:00 +0000
+
+qtgrass (0.4.7) unstable; urgency=low
+
+  * Enforce the GRASS mapset access model in the catalog and UI:
+    - Data catalog listMaps() now restricts visible maps to (active mapset)
+      + PERMANENT (when active != PERMANENT) instead of all mapsets in the
+      location.  When active is PERMANENT, only PERMANENT maps are shown.
+    - PERMANENT maps shown alongside a user mapset are decorated read-only
+      in the catalog: dimmed text, 🔒 prefix, tooltip explaining the
+      restriction.  UserRole+4 = true flag exposed for downstream gating.
+    - Layer-tree context menu (grasslayertree.cpp): mutating actions
+      (Color Table, Build Overviews, Rebuild Topology) are now disabled
+      with an explanatory tooltip when the layer's mapset != active mapset.
+      Read-only safe actions (Zoom, Properties, Attribute Table, Remove
+      from canvas) remain available.
+    - GrassColorTableDialog: Apply / Preview buttons disabled and status
+      bar explains the read-only state up-front when opened on a map from
+      a read-only mapset; runRColors() also gates internally as defence
+      in depth.
+  * No new module dialogs / output paths gated yet — GRASS itself refuses
+    to write outputs to a non-active mapset, so the visual gating in qtgrass
+    matches that backstop.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sat, 23 May 2026 10:00:00 +0000
+
+qtgrass (0.4.6) unstable; urgency=low
+
+  * Always start with the Location Wizard (amnesia mode): session is never
+    restored from $GISRC or QSettings on startup; the startup wizard always
+    runs so the user explicitly chooses a project each time.  Explicit .gxw
+    file arguments (double-click / --workspace flag) still bypass the wizard.
+  * Fix crash on first launch: applyTileSettings() called G_projection() before
+    any GRASS session existed ("MAPSET is not set").  Guard now returns early
+    when no session is active; mapsetChanged re-triggers tile initialisation
+    after the wizard establishes a session.
+  * Tile background now correctly re-initialised (CRS detection, projected WKT)
+    each time the user switches projects via the wizard.
+  * On exit save only session/gisdbase to QSettings (for workspace-file scanner);
+    session/location and session/mapset are actively removed so they can never
+    be silently restored.
+  * GrassStartupDialog::openExisting(): skip openMapset() when the user confirms
+    the session that is already active — avoids double G_setenv_nogisrc() heap
+    corruption that caused a segfault in G_get_set_window().
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Fri, 22 May 2026 09:00:00 +0000
+
+qtgrass (0.4.5) unstable; urgency=low
+
+  * Compiler warnings: all warnings in make deb now fixed:
+    - dpkg-shlibdeps "can't extract name/version from libgrass_*.8.6.so":
+      SHELL:=/bin/bash + pipe filter in debian/rules (PIPESTATUS-safe).
+    - -Wclobbered (grassvectormaplayer.cpp, grasscompositelayers.cpp): file-scope
+      #pragma GCC diagnostic ignored "-Wclobbered" (false positive — QByteArray
+      data cannot be changed by longjmp).
+    - -Wmissing-field-initializers (OsmCartoPreset::fillColor/pointColor):
+      explicit = {} default member initialisers added.
+    - -Wunused-but-set-variable (grassmapexport.cpp vp): variable removed.
+    - -Wdeprecated-declarations (QDomDocument::setContent): Qt 6 ParseResult
+      overload used in grassmenubuilder.cpp.
+    - -Wunused-parameter (mapset in buildSymbologyTab): Q_UNUSED added.
+    - -Wunused-variable (hasPoints): removed.
+    - -Wunused-result (write() in crashHandler): file-scope pragma +
+      #pragma GCC diagnostic ignored "-Wunused-result".
+    - -Wrange-loop-construct (grassmapcalcdialog.cpp): const QString & in for.
+  * Qt "cached device pixel ratio stale" QTBUG: filtered in qtMessageHandler
+    (unconditionally installed) — never printed to stderr.
+  * Tile fetch error spam: GrassTileFetcher::logTileError() throttles — first
+    failure per host logs as qCWarning once; subsequent at qCDebug (suppressed
+    in release builds); summary at 10 consecutive errors.
+  * Message handler: now installed unconditionally (not only in debug mode);
+    uses qFormatLogMessage() to restore "qtgrass.category: message" prefix;
+    QtDebugMsg suppressed in non-debug mode (matches Qt default behaviour).
+  * GISBASE build-time default message demoted from qCInfo to qCDebug.
+  * d.rgb / composite layer combos: g.list called with bare -m flag instead of
+    flags=m key=value form — all mapsets now appear in raster/vector selectors.
+  * Modules toolbox: "Display Layers" section (10 native d.* types) added at
+    top; grass-addons section (391 addons, grouped by menuPath prefix) added at
+    bottom; both searchable.
+  * Activating a d.* entry in the toolbox opens GrassAddLayerDialog pre-selected
+    to the matching native composite type (not a subprocess module dialog).
+  * Data catalog raster auto-grouping: regex now includes '.' as separator so
+    band names like Hd2f4.100 are correctly grouped; group REF file written
+    directly (no subprocess, no OS arg-length limit for 2000+ bands); groups
+    displayed collapsed even when REF write fails; filter recurses into groups.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Fri, 22 May 2026 08:00:00 +0000
+
+qtgrass (0.4.4) unstable; urgency=low
+
+  * Ten native composite display layers (no subprocess — pure GRASS C API + QPainter):
+    - GrassRgbLayer (d.rgb): 3-band RGB composite, per-band auto-stretch.
+    - GrassIhsLayer (d.ihs): IHS→RGB composite with standard colour conversion.
+    - GrassShadeLayer (d.shade): colour raster modulated by hillshade, brightness.
+    - GrassRastNumLayer (d.rast.num): cell values overlaid as text (threshold px).
+    - GrassRastArrowLayer (d.rast.arrow): flow/aspect arrows, Line/Filled/Outline.
+    - GrassVectThematicLayer (d.vect.thematic): choropleth — 5 ramps, 3 methods.
+    - GrassVectChartLayer (d.vect.chart): proportional pie/bar charts at centroids.
+    - GrassLabelLayer (d.label): attribute text labels with optional halo.
+    - GrassGeodesicLayer (d.geodesic): great circle arc between two WGS84 points.
+    - GrassRhumblineLayer (d.rhumbline): rhumb line (constant bearing).
+  * "Add Layer ▾" drop-down in the layer panel covers all 10 composite types plus
+    direct raster/vector pickers via GrassAddLayerDialog (one page per type).
+  * Data catalog: sequential rasters (dem_001, dem_002 …) auto-detected, registered
+    with i.group, displayed collapsed under 📁 group nodes; groups survive restarts.
+  * Doxygen: \file/\class/\fn/\param/\return in all public headers; cmake doxy target.
+  * QLoggingCategory: all 16 debug-emitting .cpp files use named categories.
+  * vdigit: nearestLine(x,y,maxDist) via Vect_find_line — delete/split TODOs resolved.
+  * Makefile deb target: uses -us -uc (no GPG key required); changelog trailers fixed.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:30:00 +0000
+
+qtgrass (0.4.3) unstable; urgency=low
+
+  * Scale bar and north arrow: add foreground + background colour pickers
+    (default white/black) with persistence across dialog opens.
+  * Rendering updated: all scale bar styles (simple, checker, tick) and all
+    north arrow styles (default, pointed, compass, line) now honour fgcolor/
+    bgcolor instead of hardcoded black/white.
+  * Grid: already had a single colour picker — no change needed.
+  * Raster/Vector Metadata tab: parse r.info/v.info format=json output into
+    themed group sections (Map Info, Extent, Topology, Data & Statistics,
+    Description).  Vector also shows Attribute Columns as a sortable table.
+  * Vector Symbology: separate Draw Fill / Draw Line+Border / Draw Points
+    controls; Apply button lambda now correctly captures all three checkboxes.
+  * OSM Carto preset selector: updates all three visibility checkboxes when a
+    preset is applied.
+  * Raster Symbology tab: stores last-chosen colour table per map in QSettings;
+    reopening shows the stored GRASS palette via Rast_read_colors C API.
+  * colors library now links GRASS::GIS and GRASS::Raster (required for
+    Rast_read_colors / Rast_get_d_color calls in GrassColorTableDialog).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.4.2) unstable; urgency=low
+
+  * Scale bar: all styles now apply (simple=two-tone, checker=alternating
+    segments, tick=tick marks above/below the bar).
+  * North arrow: add style selector — default (arrow+N), pointed (solid
+    arrowhead), compass (N/S/E/W labels), line (arrow only, no label).
+  * Raster properties Symbology tab: selected color table is now remembered
+    per-raster via QSettings — reopening shows the last applied table.
+  * Legend decoration: add font family, size, bold, italic, colour controls.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.4.1) unstable; urgency=low
+
+  * Fix zoomToFullExtent mixing geographic (basemap ±85°/±180°) and projected
+    (NC State Plane metres) layer extents: use sessionIsGeo heuristic to skip
+    layers whose coordinate scale doesn't match the current GRASS projection.
+  * Remove temporary debug [ZOOM]/[RENDER] logging.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.4.0) unstable; urgency=low
+
+  * Fix viewport zoom for first layer: replace mLayers.size()==1 guard with
+    a coverage-fraction check — zoom if new layer covers < 1% of current
+    viewport area.  This handles the case where loadWorkspace sets a large
+    default viewport (full NC state via resetViewportToRegion) and the user
+    then adds a small raster (15 km aspect raster = 0.03% of a 900 km view).
+  * zoomToFullExtent() now guards against width()==0 (canvas not yet laid
+    out) by deferring 50 ms instead of computing with W=1 which gives a
+    near-zero mPixelsPerUnit and permanently wrong viewport.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.3.9) unstable; urgency=low
+
+  * Fix decorations (scale bar, north arrow, grid, legend) completely unlinked:
+    - drawDecorationsNative() was called AFTER p.end() → painter closed → nothing drawn.
+    - Moved decoration drawing before p.end() so they composite onto the canvas.
+  * Implement d.legend for Direct render mode: vertical colour ramp read via
+    Rast_read_colors/Rast_read_fp_range/Rast_get_d_color, value labels at top/mid/bot.
+  * Remove all debug PNG dump code (img.save to /tmp on every render) that was
+    blocking the render thread and hiding the rendered output.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.3.8) unstable; urgency=low
+
+  * Fix horizontal-stripe artifact: revert rendering to simple viewport-
+    resolution nearest-neighbour (same algorithm as wxPython d.rast).
+    The 2-D box filter produced transparent alternate rows; NN is correct.
+  * Fix first layer not visible after add: schedule a 100 ms deferred
+    zoomToFullExtent() after addRasterLayer/addVectorLayer so the GRASS
+    raster header has time to load before the viewport is computed.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.3.7) unstable; urgency=low
+
+  * Replace NS-only area averaging with proper 2-D box filter: read the raster
+    at native resolution in BOTH NS and EW, accumulate all native pixels into
+    the dstH×dstW output grid.  Eliminates EW nearest-neighbour artefacts that
+    persisted after the NS-only fix.  Matches wxPython/Cairo rendering quality.
+  * Remove per-render debug log lines (were added for diagnosis, no longer needed).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.3.6) unstable; urgency=low
+
+  * Fix raster stripe artifact root cause: the lat/lon safety clamp block
+    unconditionally overwrote vpRegion.ns_res with viewport resolution,
+    undoing the native-resolution fix for geographic (lat/lon) locations.
+    Result: renderH == dstH, nearest-neighbour branch always taken → stripes.
+  * Fix: remove ns_res override from lat/lon clamp block; clamp only
+    north/south to ±90°, let G_adjust_Cell_head recompute rows from useNsRes.
+  * Change oversample strategy: use OVERSAMPLE=4 (4× dstH rows, capped at
+    native resolution) instead of reading ALL native rows.  This avoids
+    reading tens of thousands of rows for highly zoomed-out views while still
+    eliminating stripe artefacts via area averaging.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 21 May 2026 09:00:00 +0000
+
+qtgrass (0.3.5) unstable; urgency=low
+
+  * Fix horizontal-stripe artifact in raster rendering (aspect, slope, …):
+    root cause: GRASS Rast_get_row() uses nearest-neighbour row mapping
+    (compute_window_row → r = (int)(row*C1+C2)) so downsampled renders read
+    ONE native row per output row.  For rasters with E-W terrain features
+    (Appalachian aspect map) each native row is a solid colour → stripes.
+  * Fix: when rendering at coarser resolution than native (downsampling),
+    set the window to NATIVE NS resolution, read every native row in the
+    intersection, and area-average (accumulate + divide) native rows into
+    output rows.  Viewport EW resolution is kept so GRASS still compresses
+    columns.  For upsampling the old nearest-neighbour path is kept (correct).
+  * Render window rows/cols are now set to 0 and let G_adjust_Cell_head
+    recompute them from the chosen ns_res/ew_res (cleaner than pre-setting).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 20:00:00 +0000
+
+qtgrass (0.3.4) unstable; urgency=low
+
+  * Fix workspace viewport: loadWorkspace() now uses the saved display
+    extent from the .gxw file (west,south,east,north stored in the
+    <display extent="..."> attribute) instead of calling zoomToFullExtent()
+    which was dominated by the largest raster and made small-extent layers
+    (e.g. elev_lid792_1m covering 700m) appear as a tiny dot.
+  * Fallback order: (1) saved .gxw extent, (2) GRASS computational region
+    (WIND), (3) zoomToFullExtent() as last resort.
+  * Override applied via QTimer::singleShot(50ms) so it runs after the
+    per-layer addLayer() auto-zoom for mLayers.size()==1.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 19:00:00 +0000
+
+qtgrass (0.3.3) unstable; urgency=low
+
+  * Numbered variant addons placed immediately after their base module:
+    i.atcorr2 after i.atcorr, r.learn.ml2 after r.learn.ml,
+    r.surf.idw2 after r.surf.idw, r.univar2 after r.univar,
+    v.colors2 after v.colors, v.in.wfs2 after v.in.wfs,
+    d.mon2 after d.mon, d.vect.thematic2 after d.vect.thematic,
+    i.eb.z0m0 after i.eb.z0m.
+  * ADDONS_MENU.md: these 9 entries now use menuPath "after:base_module".
+  * GrassMenuBuilder::build() now also populates CommandActionMap mapping
+    every GRASS command to its {QMenu*, QAction*} for targeted insertion.
+  * GrassAddonMenu::populate() Pass 0 handles "after:" entries by calling
+    QMenu::insertAction() to place the variant directly below the base action.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 18:00:00 +0000
+
+qtgrass (0.3.2) unstable; urgency=low
+
+  * ADDONS_MENU.md second quality pass: fixed all 25 malformed descriptions.
+  * Categories: AUTHOR_LINE(2), GENERIC_FALLBACK(2), MD_ARTIFACT(8),
+    ORPHAN_VERB(2), MODNAME_PREFIX(1), STARTS_WITH_MODULE(1),
+    STARTS_WITH_NUMBER(1), TOO_SHORT(1), TRUNCATED_END(6) + v.civil rename.
+  * All 391 descriptions now pass automated quality checks (no empty, no
+    orphan verbs, no markdown artefacts, no author lines, no truncated ends).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 17:00:00 +0000
+
+qtgrass (0.3.1) unstable; urgency=low
+
+  * ADDONS_MENU.md audit: fixed v.civil.road → v.civil (misnamed entry);
+    all 13 TODO descriptions replaced with proper descriptions read from
+    each module's HTML/Markdown/Python source manual.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 16:00:00 +0000
+
+qtgrass (0.3.0) unstable; urgency=low
+
+  * ADDONS_MENU.md: all 391 addon modules now have informed short descriptions
+    extracted from their HTML/Markdown/C source manuals, cleaned of module-name
+    prefixes, trailing prepositions, and over-long text (≤90 chars each).
+    Menu items now display "Delineates basins  (r.stream.basins)" etc.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 15:00:00 +0000
+
+qtgrass (0.2.9) unstable; urgency=low
+
+  * ADDONS_MENU.md: new human-editable Markdown table at the repo root.
+    Columns: Module | Menu Path | Description.  This file is the single
+    authoritative source for addon placement — edit it to move any addon.
+  * cmake/scan_addons.py now reads ADDONS_MENU.md as the source of truth
+    instead of computing placement from directory prefixes alone.
+  * New-addon detection: any module in grass-addons/src that is NOT yet in
+    ADDONS_MENU.md is automatically appended with "⚠️ NEW — review placement"
+    and a RED/YELLOW cmake WARNING is emitted so the developer notices.
+  * grassaddonslist.h now includes menuPath and isNew per AddonInfo.
+  * GrassAddonMenu::populate() uses the explicit menuPath from the header
+    (→ ADDONS_MENU.md) instead of prefix heuristics; new-family submenus
+    are created from the slug (e.g. "multi-criteria-decision").
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 14:00:00 +0000
+
+qtgrass (0.2.8) unstable; urgency=low
+
+  * Fix Python-based modules (i.ai, r.learn.*, v.class.ml, …): add
+    $GISBASE/etc/python to PYTHONPATH in buildSubprocessEnv() so that
+    "import grass.script as gs" works when qtgrass runs --interface-description
+    or executes any Python GRASS module.  Previously the env had GISBASE, PATH,
+    and LD_LIBRARY_PATH set but PYTHONPATH was not set, causing:
+      ModuleNotFoundError: No module named 'grass'
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 13:30:00 +0000
+
+qtgrass (0.2.7) unstable; urgency=low
+
+  * Scrollable menus: GrassApp::applyMenuScrollLimits() walks every QMenu
+    reachable from the menu bar and calls setMaximumHeight(0.70 * screenH).
+    Qt automatically inserts its built-in up/down scroll arrow items when the
+    menu content exceeds that cap (minimum cap: 400 px).
+    Called at the end of buildMenuBar() so Raster (137+ items), Vector, and
+    all addon-extended menus are scrollable out of the box.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 13:00:00 +0000
+
+qtgrass (0.2.6) unstable; urgency=low
+
+  * Addon descriptions: cmake/scan_addons.py extracts label/description from
+    each addon's C source (module->label), Python (#% label:), HTML, or .md
+    at configure time.  All 391 addons now carry a human-readable label.
+  * Addon menu items displayed as "Human readable name  (addon.cmd)" to
+    match the core module style (e.g. "Penman-Monteith ET  (i.evapo.potrad)").
+  * New family submenus: addon-only families (r.mcda, r.maxent, v.gsflow,
+    i.hyper, i.signature, …) create new named submenus in the parent top-level
+    menu instead of a generic "Addon Extensions" bucket.
+  * Family labels: 80+ two-level prefixes have human-readable labels
+    (r.mcda → "Multi-criteria decision", v.net → "Network analysis", etc.).
+  * Exact-match addons keep the "— Addon modules —" separator in the existing
+    submenu; new-family submenus are added after a separator at the bottom of
+    the parent menu.
+  * cmake/GenerateAddonsList.cmake now invokes scan_addons.py via Python3.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 12:00:00 +0000
+
+qtgrass (0.2.5) unstable; urgency=low
+
+  * Addon menus now integrated directly into existing GRASS submenus instead
+    of a generic "Addon Extensions" bucket at the bottom of each main menu.
+  * GrassMenuBuilder::build() now populates a PrefixMenuMap that records
+    which QMenu hosts each two-level command prefix (e.g. "i.evapo" →
+    Evapotranspiration submenu, "i.segment" → Classification submenu,
+    "r.stream" → the stream-analysis submenu in Raster, etc.).
+  * GrassAddonMenu::populate() uses the PrefixMenuMap for three-tier
+    placement: (1) exact two-level prefix → insert alongside core modules
+    with a "— Addon modules —" separator; (2) one-level category fallback
+    → grouped "Addon Extensions" submenu per top-level menu; (3) orphans →
+    Tools > Addon Extensions.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 11:00:00 +0000
+
+qtgrass (0.2.4) unstable; urgency=low
+
+  * Fix addon menus not appearing: $ENV{HOME} was sandboxed by debhelper to a
+    wrong path, so grassaddonslist.h was never generated in the deb build.
+    Fixed by: (1) debian/rules now passes -DGRASS_ADDONS_DIR=$(REAL_HOME)/...
+    using eval+whoami to resolve the real home; (2) CMakeLists.txt also uses
+    execute_process(sh -c "eval echo ~$(whoami)") as fallback so cmake -B
+    invocations work without explicit -D; (3) menu label matching now strips
+    Qt accelerator markers with QRegularExpression before map lookup.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 10:30:00 +0000
+
+qtgrass (0.2.3) unstable; urgency=low
+
+  * File menu now mirrors GRASS wxPython structure: Workspace submenu (New,
+    Open Ctrl+O, Save Ctrl+S, Save As, Close), Add Raster/Vector Layer
+    shortcuts (Ctrl+Shift+R/V), Change Project, Export, Print Composer,
+    Preferences (Appearance + Satellite), Exit Ctrl+Q.
+  * saveWorkspace(): new function writes .gxw XML compatible with wxPython
+    and qtgrass loadWorkspace(); persists path in QSettings.
+  * Grass-Addons integration: cmake/GenerateAddonsList.cmake scans
+    $HOME/dev/grass-addons/src at configure time and generates
+    build/grassaddonslist.h with 391 addon module names.
+  * GrassAddonMenu::populate() builds "Addon Extensions" submenus in each
+    main menu (Raster, Vector, Imagery, Temporal, 3D raster, Database,
+    Settings, Tools) grouped by second-level family prefix
+    (r.stream, r.sun, v.net, i.eb, …) with human-readable subfamily labels.
+  * Addon menus disabled gracefully when addons tree is not present.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 10:00:00 +0000
+
+qtgrass (0.2.2) unstable; urgency=low
+
+  * Fix crash when creating a new vector for digitising: Vect_open_update()
+    calls G_fatal_error (→ abort) for non-existent maps.  GrassVectorEditor
+    now calls G_find_vector2() first; if the map is not found it uses
+    Vect_open_new() to create it so users can start digitising from scratch.
+  * Fix module dialog description bar palette in dark mode (missed in 0.2.1).
+  * Fix flags section header colour (#555 → QPalette::PlaceholderText).
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 08:45:00 +0000
+
+qtgrass (0.2.1) unstable; urgency=low
+
+  * Fix module dialog description bar: hardcoded #f0f0f0 background replaced
+    with QPalette::AlternateBase so it is readable in dark mode.
+  * Fix flags section header hardcoded #555 colour replaced with
+    QPalette::PlaceholderText — visible in both themes.
+  * Fix duplicate File and Help menus: GrassMenuBuilder now accepts a
+    skipLabels list (default: "File", "Help") so the XML-built menus do not
+    duplicate the qtgrass-specific ones added before them.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 08:30:00 +0000
+
+qtgrass (0.2.0) unstable; urgency=low
+
+  * Dark mode: full Qt stylesheet matching GRASS wxPython's dark grey look,
+    with Follow OS / Light / Dark options in File → Preferences → Appearance.
+  * GRASS icon toolbar: toolbar buttons now use 22×22 PNG icons loaded from
+    $GISBASE/gui/icons/grass/ (zoom-extent, pan, zoom-in/out, layer-info,
+    raster-profile, region, raster-calculator, edit, monitor-settings,
+    raster-histogram).  Falls back to text if icons are missing.
+  * Menu from GRASS XML: menus are now built by parsing
+    $GISBASE/gui/wxpython/xml/menudata.xml so all 400+ GRASS module items
+    (Raster, Vector, Imagery, 3D raster, Database, Temporal, Settings) are
+    accessible via the menu bar and open the module dialog on click.
+  * Handler map: common wxPython handlers (OnAddRaster, OnAddVector) are
+    mapped to native qtgrass actions.
+  * GrassMenuBuilder: new reusable XML menu parser (grassmenubuilder.cpp/h).
+  * GrassStyle: new dark stylesheet helper (grassstyle.h).
+  * Theme is persisted in QSettings (ui/theme) and applied before UI build.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Sun, 18 May 2026 08:00:00 +0000
+
+qtgrass (0.1.9) unstable; urgency=low
+
+  * Fix Change Project crash: clear layer tree + canvas (mLayerPanel->clear)
+    before showing the dialog so no GRASS render runs during session switch.
+  * Fix dangling pointer crash: mCanvas->clearLayers() bypassed the layer tree;
+    replaced with GrassLayerPanel::clear() which removes tree items atomically.
+  * Fix "Illegal latitude for North" crash on project switch: reset canvas
+    viewport (mCenter/mPixelsPerUnit) to new session's GRASS region after
+    openMapset() via new resetViewportToRegion() method.
+  * Fix IAU planetary body list: model now queries only geodetic_crs (removes
+    2074 projected CRS entries that swamped the list); initial filter cleared
+    so all 127 geographic CRS / 97 bodies show on open.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Fri, 16 May 2026 18:40:00 +0000
+
+qtgrass (0.1.5) unstable; urgency=low
+
+  * Add /usr/bin/qtgrass-debug wrapper script to the package so it is
+    always in PATH regardless of whether a GRASS session is active.
+    Sets QTGRASS_DEBUG=1 and LD_LIBRARY_PATH, tees output to
+    ~/qtgrass-debug.log.  Previously the script was only installed under
+    /usr/local/grass86/bin/ which is not in a typical desktop PATH.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Fri, 15 May 2026 07:30:00 +0000
+
+qtgrass (0.1.4) unstable; urgency=medium
+
+  * Add .gxw workspace file support: GrassWorkspace parser (QDomDocument),
+    mapset browser shows *.gxw files found in selected location, double-click
+    or --workspace flag opens the workspace directly skipping the startup
+    dialog, layers from the first <display> block are added to the canvas.
+  * Register application/x-grass-workspace MIME type for *.gxw files so
+    double-click in a file manager launches qtgrass with the workspace.
+  * Fix raster rendering "outside region" crash: save/restore the
+    computational region around Rast_open_old/close so that GRASS row-
+    coordinate checks use the raster's native extent, not the WIND file's
+    potentially smaller subregion.
+  * Fix vector "not found" fatal exit: pre-check with G_find_vector2()
+    before Vect_open_old() so missing layers are skipped gracefully.
+  * Fix GrassMapCanvas::drawRegionOverlay() crash when no session is active:
+    guard G_get_set_window() with G_getenv_nofatal("MAPSET").
+  * Initialise computational region in GrassEnv::openMapset() via
+    G_get_window()+G_set_window() after setting session env vars.
+  * GrassRasterMapLayer::extent() and GrassVectorMapLayer::extent() now
+    trigger load() eagerly so zoomToFullExtent() sees valid extents.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Thu, 14 May 2026 23:30:00 +0000
+
+qtgrass (0.1.3) unstable; urgency=medium
+
+  * Fix session detection when launched via grass --exec or interactive
+    GRASS shell: parse $GISRC file (KEY: VALUE format) to obtain
+    GISDBASE/LOCATION_NAME/MAPSET before falling back to env vars.
+    Previously all three were empty when launched this way, causing
+    either an unwanted startup dialog or a G_fatal_error crash.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Wed, 14 May 2026 21:00:00 +0000
+
+qtgrass (0.1.2) unstable; urgency=medium
+
+  * Fix GRASS in-memory state not initialised from environment variables:
+    G_setenv_nogisrc() now called during GrassEnv::init() for GISDBASE,
+    LOCATION_NAME and MAPSET so G_mapset() no longer triggers
+    G_fatal_error("MAPSET is not set") when qtgrass is launched from
+    inside a GRASS shell, which silently killed the process.
+  * main.cpp: env-var session now triggers openMapset() so the
+    mapsetChanged signal fires and the catalog and title bar update
+    correctly at startup without requiring a startup dialog.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Wed, 14 May 2026 20:30:00 +0000
+
+qtgrass (0.1.1) unstable; urgency=low
+
+  * Fix startup dialog defaulting to $HOME/grassdata (GRASS standard path).
+  * Fix app closing silently after mapset selection: set
+    QApplication::setQuitOnLastWindowClosed(false) and implement
+    GrassApp::closeEvent() to call QApplication::quit() explicitly.
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Wed, 14 May 2026 19:30:00 +0000
+
+qtgrass (0.1.0) unstable; urgency=low
+
+  * Initial packaging of qtgrass 0.1.0.
+  * Complete Qt6 replacement of the GRASS GIS wxPython GUI, implementing
+    all 21 planned components:
+    - Core framework: startup wizard, map canvas, layer panel, toolbox
+    - Map rendering: direct C API and GRASS display-driver modes
+    - Module dialog system with GUI section tabs and live output streaming
+    - Vector digitizer with QUndoStack, snap support, and topology rebuild
+    - Graphical modeler with .gxm load/save and sequential execution
+    - Temporal animation with pre-render, STRDS/STVDS support, MP4 export
+    - Print composer: PDF/PNG/SVG with map/legend/scalebar/northarrow items
+    - Database manager: SQL editor, schema browser, field calculator
+    - Supervised classification (iclass) with 2-sigma scatter plots
+    - Georectification: dual canvas, GCP table, polynomial RMS, i.rectify
+    - Map swipe, WMS browser, network analysis launcher, history browser
+    - Temporal plot (tplot) and 3-D terrain view (OpenGL 3.3 heightmap)
+
+ -- Yann Chemin <dr.yann.chemin@gmail.com>  Wed, 14 May 2026 18:00:00 +0000

@@ -1,0 +1,18 @@
+<map id="src/tiles/grasstilecache.h" name="src/tiles/grasstilecache.h">
+<area shape="rect" id="Node000001" title="Thread&#45;safe in&#45;memory and on&#45;disk tile image cache." alt="" coords="186,5,369,31"/>
+<area shape="rect" id="Node000002" href="$grassapp_8cpp.html" title=" " alt="" coords="5,225,136,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,37,142,54,105,81,92,97,82,115,72,157,70,196,72,225,66,225,65,196,67,156,77,114,87,94,101,77,139,49,183,32"/>
+<area shape="rect" id="Node000003" href="$grasstilebackground_8h.html" title="GrassMapLayer subclass rendering slippy&#45;map XYZ tiles." alt="" coords="337,152,559,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,38,371,102,434,150,430,154,368,106,297,42"/>
+<area shape="rect" id="Node000005" href="$grasstilecache_8cpp.html" title=" " alt="" coords="381,79,579,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="323,33,448,76,446,81,322,38"/>
+<area shape="rect" id="Node000006" href="$grasstilefetcher_8h.html" title="Async HTTP fetcher for XYZ map tiles." alt="" coords="115,79,306,104"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="259,43,223,80,220,77,255,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="375,182,132,228,131,223,374,177"/>
+<area shape="rect" id="Node000004" href="$grasstilebackground_8cpp.html" title=" " alt="" coords="330,225,566,251"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="451,191,451,225,445,225,445,191"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="160,111,127,129,98,154,87,171,80,191,74,225,69,224,75,189,82,169,94,150,124,125,158,107"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="263,105,410,149,409,154,261,110"/>
+<area shape="rect" id="Node000007" href="$grasstilefetcher_8cpp.html" title=" " alt="" coords="108,152,313,177"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="213,118,213,152,208,152,208,118"/>
+</map>

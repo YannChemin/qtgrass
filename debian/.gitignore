@@ -1,0 +1,7 @@
+# debhelper build artefacts — regenerated on every dpkg-buildpackage run
+.debhelper/
+debhelper-build-stamp
+files
+qtgrass.debhelper.log
+qtgrass.substvars
+qtgrass/

@@ -1,0 +1,46 @@
+#!/bin/bash
+# qtgrass-debug — launch qtgrass with full startup logging.
+#
+# Output goes to both the terminal AND ~/qtgrass-debug.log.
+# The installed binary already has the QTGRASS_DEBUG compile-time define
+# when built with make deb-debug; this script just activates it.
+#
+# Usage (outside a GRASS session):
+#   qtgrass-debug [args...]
+#
+# Usage (from inside a GRASS session):
+#   qtgrass-debug [args...]          # GISRC already set by GRASS
+
+LOG="$HOME/qtgrass-debug.log"
+BIN="/usr/bin/qtgrass"
+
+# If no GISBASE is set, try the default install path
+export GISBASE="${GISBASE:-/usr/local/grass86}"
+
+# Ensure library path includes GRASS libs
+export LD_LIBRARY_PATH="$GISBASE/lib:${LD_LIBRARY_PATH:-}"
+
+# Activate the in-process file logger (see main.cpp: QTGRASS_DEBUG=1)
+export QTGRASS_DEBUG=1
+
+# Qt message formatting
+export QT_MESSAGE_PATTERN="%{time hh:mm:ss.zzz} [%{type}] %{file}:%{line} %{message}"
+
+cat >&2 << EOF
+============================================================
+ qtgrass DEBUG  $(date)
+ Binary : $BIN
+ Log    : $LOG
+ DISPLAY: ${DISPLAY:-(not set)}
+ GISBASE: $GISBASE
+ GISRC  : ${GISRC:-(not set)}
+============================================================
+EOF
+
+if [ ! -x "$BIN" ]; then
+    echo "ERROR: $BIN not found — install the qtgrass package first." >&2
+    exit 1
+fi
+
+# Run, tee all output to the log file
+exec "$BIN" "$@" 2>&1 | tee -a "$LOG"

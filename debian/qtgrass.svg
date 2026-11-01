@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="23" fill="#2e7d32" stroke="#1b5e20" stroke-width="1.5"/>
+  <!-- Inner circle (lighter green) -->
+  <circle cx="24" cy="22" r="14" fill="#43a047" stroke="#2e7d32" stroke-width="1"/>
+  <!-- Q letter -->
+  <text x="24" y="31"
+        font-family="DejaVu Sans,sans-serif"
+        font-size="22"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="white"
+        letter-spacing="-1">Q</text>
+  <!-- Q tail -->
+  <line x1="29" y1="28" x2="35" y2="36"
+        stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- GRASS label strip -->
+  <rect x="5" y="37" width="38" height="9" rx="3" fill="#1b5e20" opacity="0.85"/>
+  <text x="24" y="44.5"
+        font-family="DejaVu Sans,sans-serif"
+        font-size="7"
+        font-weight="bold"
+        text-anchor="middle"
+        fill="#a5d6a7"
+        letter-spacing="1">GRASS</text>
+</svg>

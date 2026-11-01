@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,129,113,155"/>
+<area shape="rect" id="Node000001" href="$classCrsChoicePage.html" title=" " alt="" coords="175,5,294,31"/>
+<area shape="poly" id="edge87_Node000000_Node000001" title=" " alt="" coords="77,117,113,77,160,40,184,28,186,33,163,44,116,81,81,120"/>
+<area shape="rect" id="Node000002" href="$classEpsgPage.html" title=" " alt="" coords="193,55,277,80"/>
+<area shape="poly" id="edge88_Node000000_Node000002" title=" " alt="" coords="95,120,160,89,192,77,194,82,162,94,97,125"/>
+<area shape="rect" id="Node000003" href="$classGisdbPage.html" title=" " alt="" coords="189,104,280,129"/>
+<area shape="poly" id="edge89_Node000000_Node000003" title=" " alt="" coords="126,130,189,121,189,126,127,135"/>
+<area shape="rect" id="Node000004" href="$classIauPage.html" title=" " alt="" coords="198,153,271,179"/>
+<area shape="poly" id="edge90_Node000000_Node000004" title=" " alt="" coords="127,149,198,158,197,164,127,154"/>
+<area shape="rect" id="Node000005" href="$classLocationNamePage.html" title=" " alt="" coords="161,203,308,228"/>
+<area shape="poly" id="edge91_Node000000_Node000005" title=" " alt="" coords="99,158,162,188,196,200,194,205,160,192,97,163"/>
+<area shape="rect" id="Node000006" href="$classSummaryPage.html" title=" " alt="" coords="177,252,293,277"/>
+<area shape="poly" id="edge92_Node000000_Node000006" title=" " alt="" coords="82,164,117,201,163,237,189,250,187,254,160,242,114,205,78,167"/>
+</map>

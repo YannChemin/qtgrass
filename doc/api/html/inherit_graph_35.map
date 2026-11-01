@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,228,136,253"/>
+<area shape="rect" id="Node000001" href="$classGrassLayoutItem.html" title=" " alt="" coords="187,153,320,179"/>
+<area shape="poly" id="edge35_Node000000_Node000001" title=" " alt="" coords="114,220,220,176,222,181,116,225"/>
+<area shape="rect" id="Node000008" href="$classModelerNodeItem.html" title=" " alt="" coords="184,301,323,327"/>
+<area shape="poly" id="edge42_Node000000_Node000008" title=" " alt="" coords="117,256,221,299,219,304,115,261"/>
+<area shape="rect" id="Node000002" href="$classGrassLayoutImageItem.html" title=" " alt="" coords="387,5,561,31"/>
+<area shape="poly" id="edge36_Node000001_Node000002" title=" " alt="" coords="268,140,310,89,338,62,369,40,395,28,397,33,372,44,341,66,314,93,273,144"/>
+<area shape="rect" id="Node000003" href="$classGrassLayoutLegendItem.html" title=" " alt="" coords="384,55,564,80"/>
+<area shape="poly" id="edge37_Node000001_Node000003" title=" " alt="" coords="280,143,321,115,370,89,403,78,405,83,372,94,324,119,283,147"/>
+<area shape="rect" id="Node000004" href="$classGrassLayoutMapItem.html" title=" " alt="" coords="393,104,555,129"/>
+<area shape="poly" id="edge38_Node000001_Node000004" title=" " alt="" coords="324,148,416,127,417,132,325,153"/>
+<area shape="rect" id="Node000005" href="$classGrassLayoutNorthArrowItem.html" title=" " alt="" coords="371,153,577,179"/>
+<area shape="poly" id="edge39_Node000001_Node000005" title=" " alt="" coords="333,163,371,163,371,169,333,169"/>
+<area shape="rect" id="Node000006" href="$classGrassLayoutScaleBarItem.html" title=" " alt="" coords="379,203,569,228"/>
+<area shape="poly" id="edge40_Node000001_Node000006" title=" " alt="" coords="325,179,417,200,416,205,324,184"/>
+<area shape="rect" id="Node000007" href="$classGrassLayoutTextItem.html" title=" " alt="" coords="394,252,554,277"/>
+<area shape="poly" id="edge41_Node000001_Node000007" title=" " alt="" coords="283,184,324,212,372,237,409,249,407,254,370,242,321,216,280,189"/>
+<area shape="rect" id="Node000009" href="$classModelerActionItem.html" title=" " alt="" coords="401,301,547,327"/>
+<area shape="poly" id="edge43_Node000008_Node000009" title=" " alt="" coords="337,311,400,311,400,317,337,317"/>
+<area shape="rect" id="Node000010" href="$classModelerDataItem.html" title=" " alt="" coords="406,351,542,376"/>
+<area shape="poly" id="edge44_Node000008_Node000010" title=" " alt="" coords="325,327,417,348,416,353,324,332"/>
+</map>

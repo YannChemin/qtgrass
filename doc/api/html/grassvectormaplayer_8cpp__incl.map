@@ -1,0 +1,42 @@
+<map id="src/canvas/grassvectormaplayer.cpp" name="src/canvas/grassvectormaplayer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="783,5,1042,31"/>
+<area shape="rect" id="Node000002" href="$grassvectormaplayer_8h.html" title="GRASS vector map layer with OSM Carto style support." alt="" coords="182,79,353,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="809,33,366,82,366,77,809,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="533,225,618,251"/>
+<area shape="poly" id="edge17_Node000001_Node000006" title=" " alt="" coords="784,32,674,50,631,63,603,81,583,111,574,146,572,181,574,212,569,212,567,181,569,145,579,109,599,77,628,59,673,45,783,26"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="613,79,690,104"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="871,33,704,78,703,73,870,28"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="715,79,857,104"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="894,33,820,74,817,69,891,28"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="881,79,944,104"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="915,31,915,65,910,65,910,31"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="968,79,1036,104"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="929,29,978,68,975,72,925,33"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1061,79,1135,104"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="943,28,1056,71,1054,76,941,33"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1160,79,1252,104"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="960,28,1148,73,1146,78,959,33"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1276,79,1389,104"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="981,28,1262,75,1261,81,980,33"/>
+<area shape="rect" id="Node000003" href="$grassmaplayer_8h.html" title="Abstract layer base class and GrassExtent geographic bounding box." alt="" coords="407,152,538,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,101,427,145,426,150,299,107"/>
+<area shape="rect" id="Node000007" href="$grassosmcarto_8h.html" title=" " alt="" coords="202,152,333,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="270,104,270,138,265,138,265,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="118,225,185,251"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="182,99,152,106,123,116,96,132,75,154,71,162,70,170,78,187,95,203,116,216,113,221,92,207,74,190,65,171,65,161,71,150,93,128,121,111,151,100,181,94"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="233,225,307,251"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="294,102,323,121,337,135,347,151,350,172,341,191,325,207,306,221,303,216,322,203,337,188,345,171,342,153,332,138,320,126,291,106"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="5,225,44,251"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="183,103,120,121,90,135,64,154,44,182,32,212,27,211,39,179,60,150,88,131,118,116,181,98"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="85,152,177,177"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="247,106,167,148,164,143,244,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="435,225,508,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="475,178,474,212,469,212,470,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="335,225,405,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="458,180,400,219,397,215,455,175"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="491,175,549,215,546,219,488,180"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="285,175,343,215,340,219,282,180"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="250,180,183,220,181,216,247,175"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="270,178,272,212,266,212,265,178"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="229,180,58,230,57,225,228,175"/>
+</map>

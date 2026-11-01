@@ -1,0 +1,11 @@
+<map id="GrassSpinParam" name="GrassSpinParam">
+<area shape="rect" id="Node000001" title="Integer parameter widget (QSpinBox)." alt="" coords="23,256,151,281"/>
+<area shape="rect" id="Node000002" href="$classGrassParamWidget.html" title="Abstract base for all parameter input widgets in GrassModuleDialog." alt="" coords="14,181,161,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,221,90,256,85,256,85,221"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,93,84,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="59,130,84,180,79,182,54,132"/>
+<area shape="rect" id="Node000004" href="$structGrassParamDesc.html" title="Parsed &lt;parameter&gt; element from a module&#39;s interface description." alt="" coords="108,93,240,119"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="155,130,101,183,98,179,151,126"/>
+<area shape="rect" id="Node000005" href="$structGrassGisPrompt.html" title="Parsed &lt;gisprompt&gt; element from a module&#39;s interface description." alt="" coords="111,5,237,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="177,45,177,93,171,93,171,45"/>
+</map>

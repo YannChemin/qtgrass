@@ -1,0 +1,96 @@
+.TH QTGRASS 1 "2026-05-14" "qtgrass 0.1.0" "GRASS GIS Qt6 GUI"
+.SH NAME
+qtgrass \- Qt6 native graphical user interface for GRASS GIS
+.SH SYNOPSIS
+.B qtgrass
+[\fB\-\-module\fR \fIMODULE\fR [\fIARGS\fR...]]
+[\fB\-\-qtui\-cmd\fR \fICOMMAND\fR]
+.SH DESCRIPTION
+.B qtgrass
+is a full-featured Qt6 replacement for the GRASS GIS wxPython GUI.
+It provides an integrated environment for running GRASS modules,
+visualising raster and vector data, and performing spatial analyses.
+.PP
+When invoked without arguments,
+.B qtgrass
+opens the full GUI: startup wizard (location/mapset selection), map canvas,
+module toolbox, layer panel, and all tool dialogs.
+.PP
+When invoked with
+.BR \-\-module ,
+a standalone module dialog is opened for the named GRASS module and the
+program exits when the dialog is closed.
+.PP
+When invoked with
+.BR \-\-qtui\-cmd ,
+the
+.I COMMAND
+string (as produced by
+.IR G_recreate_command (3))
+is parsed into a module name and arguments, and the corresponding module
+dialog is shown.  This mode is used by the GRASS
+.B \-\-qtui
+flag in
+.BR parser.c .
+.SH OPTIONS
+.TP
+.BI \-\-module " MODULE " [\fIKEY=VALUE\fR...]
+Open a standalone module dialog for
+.I MODULE
+with optional pre\-filled parameters.
+.TP
+.BI \-\-qtui\-cmd " COMMAND"
+Parse
+.I COMMAND
+and show its module dialog.  Used internally by the GRASS
+.B \-\-qtui
+hook.
+.SH ENVIRONMENT
+.TP
+.B GISBASE
+Path to the GRASS installation
+.RI ( /usr/local/grass86
+by default at build time).
+.TP
+.B GISRC
+Path to the GRASS session resource file.
+Must point to a valid GRASS environment when running any module.
+.TP
+.B GRASS_PYTHON
+Python interpreter used when spawning GRASS Python scripts.
+.SH FILES
+.TP
+.I ~/.config/qtgrass/qtgrass.conf
+Per\-user settings (last mapset, window geometry, render mode).
+.SH EXAMPLES
+Start the full GUI:
+.PP
+.RS
+.B qtgrass
+.RE
+.PP
+Open a standalone r.slope.aspect dialog with a pre\-filled map:
+.PP
+.RS
+.B qtgrass \-\-module r.slope.aspect elevation=dem
+.RE
+.PP
+The GRASS
+.B \-\-qtui
+flag triggers:
+.PP
+.RS
+.B r.slope.aspect \-\-qtui elevation=dem slope=slope
+.RE
+which is equivalent to running:
+.RS
+.B qtgrass \-\-qtui\-cmd "r.slope.aspect elevation=dem slope=slope"
+.RE
+.SH SEE ALSO
+.BR grass (1),
+.BR r.slope.aspect (1),
+.BR v.net.path (1)
+.PP
+GRASS GIS project: <https://grass.osgeo.org>
+.SH AUTHOR
+Yann Chemin <dr.yann.chemin@gmail.com>

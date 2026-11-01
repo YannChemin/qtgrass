@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=qtgrass
+GenericName=GRASS GIS Qt6 GUI
+Comment=Qt6 native graphical interface for GRASS GIS
+Exec=qtgrass %f
+Icon=qtgrass
+Terminal=false
+StartupNotify=true
+Categories=Science;Education;Geography;
+Keywords=GIS;GRASS;remote sensing;spatial analysis;raster;vector;
+MimeType=application/x-grass-workspace;application/x-grass-gxm;

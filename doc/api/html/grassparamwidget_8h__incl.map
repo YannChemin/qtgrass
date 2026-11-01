@@ -1,0 +1,15 @@
+<map id="src/module/grassparamwidget.h" name="src/module/grassparamwidget.h">
+<area shape="rect" id="Node000001" title="Abstract parameter widget and concrete subclasses for GRASS module dialogs." alt="" coords="143,5,373,31"/>
+<area shape="rect" id="Node000002" href="$grassmoduledesc_8h.html" title="Plain&#45;data structs carrying the parsed GRASS module XML interface description." alt="" coords="39,79,187,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,33,150,75,147,70,233,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="211,79,305,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="261,31,261,65,255,65,255,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="329,79,408,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="277,28,340,69,337,73,274,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,60,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,106,58,145,54,141,98,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,152,141,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="115,104,115,138,110,138,110,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,152,236,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="128,102,177,141,174,145,125,106"/>
+</map>

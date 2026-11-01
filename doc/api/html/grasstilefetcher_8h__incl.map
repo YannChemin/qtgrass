@@ -1,0 +1,24 @@
+<map id="src/tiles/grasstilefetcher.h" name="src/tiles/grasstilefetcher.h">
+<area shape="rect" id="Node000001" title="Async HTTP fetcher for XYZ map tiles." alt="" coords="253,5,444,31"/>
+<area shape="rect" id="Node000002" href="$grasstilecache_8h.html" title="Thread&#45;safe in&#45;memory and on&#45;disk tile image cache." alt="" coords="234,79,362,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,33,316,69,312,66,338,29"/>
+<area shape="rect" id="Node000003" href="$grasstilekey_8h.html" title="Unique identifier for a slippy&#45;map XYZ tile." alt="" coords="13,152,124,177"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="315,33,260,54,199,81,143,114,96,146,93,142,141,109,197,76,257,49,313,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="148,152,213,177"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="308,33,265,52,243,65,224,80,203,109,190,139,185,137,199,106,220,77,240,60,262,47,306,28"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="491,152,561,177"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="359,29,387,64,426,102,458,125,491,143,488,148,455,129,423,106,383,67,355,32"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="437,79,626,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="379,28,490,71,488,76,377,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="650,79,725,104"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="407,28,637,76,636,81,406,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,107,120,150,118,145,260,101"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="281,106,213,147,210,142,278,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="393,152,467,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="320,102,398,143,395,148,318,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="238,152,369,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="302,104,304,138,299,139,296,105"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="335,101,478,146,477,151,334,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,132,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,178,71,212,66,212,66,178"/>
+</map>

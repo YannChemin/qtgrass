@@ -1,0 +1,48 @@
+Source: qtgrass
+Section: science
+Priority: optional
+Maintainer: Yann Chemin <dr.yann.chemin@gmail.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake (>= 3.22),
+ qt6-base-dev,
+ qt6-base-dev-tools,
+ libqt6svg6-dev,
+ qt6-charts-dev,
+ libcups2-dev,
+ libgdal-dev,
+ libgl1-mesa-dev | libgl-dev,
+ libglu1-mesa-dev | libglu-dev,
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://grass.osgeo.org
+
+Package: qtgrass
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Recommends:
+ grass (>= 8.0),
+Suggests:
+ ffmpeg,
+Description: Qt6 native GUI for GRASS GIS
+ qtgrass is a full-featured Qt6 graphical user interface for GRASS GIS,
+ replacing the legacy wxPython interface with a native C++/Qt6 application.
+ .
+ Features include:
+  - Map canvas with raster/vector rendering and layer management
+  - Module dialog launcher for all GRASS modules
+  - Graphical modeler (.gxm) with node-graph editor
+  - Vector digitizer with undo/redo (v.edit)
+  - Temporal animation player (STRDS/STVDS) with MP4 export
+  - Print composer with PDF/PNG/SVG export
+  - Database manager with SQL editor and field calculator
+  - Supervised classification (iclass) with scatter plots
+  - Georectification with GCP table and RMS computation
+  - 3-D terrain view via OpenGL 3.3 heightmap renderer
+  - WMS/WMTS browser, map swipe comparison, network analysis launcher
+  - Time-series plot (tplot) and map history browser
+ .
+ GRASS GIS 8.0 or later must be installed separately.  Build against a
+ local GRASS installation by passing -DGRASS_PREFIX=/path to cmake.

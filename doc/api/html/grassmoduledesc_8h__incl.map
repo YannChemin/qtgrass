@@ -1,0 +1,9 @@
+<map id="src/module/grassmoduledesc.h" name="src/module/grassmoduledesc.h">
+<area shape="rect" id="Node000001" title="Plain&#45;data structs carrying the parsed GRASS module XML interface description." alt="" coords="5,5,229,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="10,79,65,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,33,62,72,59,68,103,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,145,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,31,120,65,115,65,115,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="170,79,241,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,29,182,68,179,72,130,33"/>
+</map>

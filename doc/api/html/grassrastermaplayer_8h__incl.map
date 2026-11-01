@@ -1,0 +1,13 @@
+<map id="src/canvas/grassrastermaplayer.h" name="src/canvas/grassrastermaplayer.h">
+<area shape="rect" id="Node000001" title="GRASS raster map layer with overview&#45;level selection." alt="" coords="80,5,321,31"/>
+<area shape="rect" id="Node000002" href="$grassmaplayer_8h.html" title="Abstract layer base class and GrassExtent geographic bounding box." alt="" coords="73,79,203,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,33,159,70,155,66,188,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="228,79,301,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="213,29,247,67,243,70,209,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,79,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,106,70,146,67,141,121,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="103,152,173,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="141,104,141,138,135,138,135,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="198,152,283,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="156,102,214,142,211,146,153,106"/>
+</map>

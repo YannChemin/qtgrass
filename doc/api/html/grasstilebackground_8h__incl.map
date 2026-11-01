@@ -1,0 +1,36 @@
+<map id="src/tiles/grasstilebackground.h" name="src/tiles/grasstilebackground.h">
+<area shape="rect" id="Node000001" title="GrassMapLayer subclass rendering slippy&#45;map XYZ tiles." alt="" coords="272,5,493,31"/>
+<area shape="rect" id="Node000002" href="$grassmaplayer_8h.html" title="Abstract layer base class and GrassExtent geographic bounding box." alt="" coords="5,152,197,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="341,33,281,53,217,81,167,113,126,145,123,141,164,108,215,76,279,48,339,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="149,225,219,251"/>
+<area shape="poly" id="edge20_Node000001_Node000004" title=" " alt="" coords="374,33,206,216,202,213,370,29"/>
+<area shape="rect" id="Node000006" href="$grasstilecache_8h.html" title="Thread&#45;safe in&#45;memory and on&#45;disk tile image cache." alt="" coords="323,152,451,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="386,31,389,138,383,138,380,31"/>
+<area shape="rect" id="Node000011" href="$grasstilefetcher_8h.html" title="Async HTTP fetcher for XYZ map tiles." alt="" coords="421,79,555,104"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="401,28,461,69,458,73,398,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="579,79,677,104"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="423,28,576,72,575,77,421,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="243,225,317,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,175,239,218,237,223,129,180"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="116,175,162,214,158,218,113,179"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="39,225,124,251"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="101,178,91,213,86,211,95,177"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="371,180,310,220,307,215,368,175"/>
+<area shape="poly" id="edge11_Node000006_Node000004" title=" " alt="" coords="355,180,230,223,229,218,353,175"/>
+<area shape="rect" id="Node000007" href="$grasstilekey_8h.html" title="Unique identifier for a slippy&#45;map XYZ tile." alt="" coords="497,225,607,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="414,175,514,217,511,222,412,180"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="725,225,790,251"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="447,175,712,225,711,230,446,180"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="341,225,472,251"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="393,177,402,211,397,213,387,178"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="489,299,615,324"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="555,251,555,285,549,285,549,251"/>
+<area shape="poly" id="edge18_Node000011_Node000004" title=" " alt="" coords="444,107,380,126,312,154,257,186,211,219,208,215,254,182,309,150,379,121,443,101"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="473,106,416,146,413,142,470,102"/>
+<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="493,104,501,137,516,176,537,213,533,215,511,178,496,139,488,105"/>
+<area shape="poly" id="edge15_Node000011_Node000009" title=" " alt="" coords="556,101,726,129,827,150,834,169,826,188,810,206,791,220,788,216,807,202,822,186,829,169,824,154,725,134,555,106"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="525,152,715,177"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="510,102,588,143,585,148,508,106"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="739,152,813,177"/>
+<area shape="poly" id="edge17_Node000011_Node000013" title=" " alt="" coords="535,101,726,148,725,154,534,107"/>
+</map>

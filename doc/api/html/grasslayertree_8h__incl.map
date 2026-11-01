@@ -1,0 +1,9 @@
+<map id="src/layers/grasslayertree.h" name="src/layers/grasslayertree.h">
+<area shape="rect" id="Node000001" title="Layer tree widget with custom delegate, model, and context menus." alt="" coords="173,5,368,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,165,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,33,129,76,127,71,240,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="189,79,352,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="273,31,273,65,268,65,268,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="376,79,467,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="296,28,385,70,383,75,294,33"/>
+</map>

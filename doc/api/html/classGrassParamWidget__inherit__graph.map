@@ -1,0 +1,15 @@
+<map id="GrassParamWidget" name="GrassParamWidget">
+<area shape="rect" id="Node000001" title="Abstract base for all parameter input widgets in GrassModuleDialog." alt="" coords="354,79,501,104"/>
+<area shape="rect" id="Node000003" href="$classGrassDoubleSpinParam.html" title="Floating&#45;point parameter widget (QDoubleSpinBox)." alt="" coords="5,152,180,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="361,109,147,154,146,149,360,104"/>
+<area shape="rect" id="Node000004" href="$classGrassEnumParam.html" title="Enumerated string parameter widget (QComboBox)." alt="" coords="204,152,341,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="391,112,299,154,297,149,389,107"/>
+<area shape="rect" id="Node000005" href="$classGrassFileParam.html" title="File or directory picker parameter widget." alt="" coords="366,152,489,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="430,118,430,152,425,152,425,118"/>
+<area shape="rect" id="Node000006" href="$classGrassLineEditParam.html" title="Plain text / GRASS map name parameter widget (QLineEdit)." alt="" coords="513,152,665,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="467,107,563,149,561,154,465,112"/>
+<area shape="rect" id="Node000007" href="$classGrassSpinParam.html" title="Integer parameter widget (QSpinBox)." alt="" coords="689,152,817,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="493,104,701,149,699,154,492,110"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="388,5,467,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,44,430,79,425,79,425,44"/>
+</map>

@@ -1,0 +1,30 @@
+<map id="src/canvas/grassmapcanvas.h" name="src/canvas/grassmapcanvas.h">
+<area shape="rect" id="Node000001" title="Interactive map display widget with async rendering pipeline." alt="" coords="544,5,761,31"/>
+<area shape="rect" id="Node000002" href="$grassmaplayer_8h.html" title="Abstract layer base class and GrassExtent geographic bounding box." alt="" coords="98,79,229,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="574,33,243,81,242,76,574,28"/>
+<area shape="rect" id="Node000006" href="$grassdisplaycmd_8h.html" title="Display command descriptor for the GRASS display driver pipeline." alt="" coords="261,79,405,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="602,33,398,78,397,73,601,28"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="429,79,556,104"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="628,33,532,75,530,71,626,28"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="580,79,635,104"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="647,32,624,69,620,66,643,30"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="659,79,740,104"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="663,30,686,66,682,69,658,32"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="764,79,837,104"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="678,28,765,70,763,75,675,33"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="861,79,932,104"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="693,28,849,73,848,79,691,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="956,79,1035,104"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="711,28,943,76,941,81,710,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,79,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,106,75,147,72,143,142,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="213,152,284,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="179,102,226,141,223,145,175,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="103,152,189,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="163,105,155,140,149,138,158,104"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="321,106,275,145,271,141,317,102"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="309,152,375,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="337,104,341,138,336,139,332,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="399,152,493,177"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="352,102,418,142,415,147,349,106"/>
+</map>

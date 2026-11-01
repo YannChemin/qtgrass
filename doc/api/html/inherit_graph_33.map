@@ -1,0 +1,61 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,696,80,721"/>
+<area shape="rect" id="Node000001" href="$classGrassAddonManager.html" title=" " alt="" coords="150,5,307,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="41,682,41,549,50,357,60,257,75,167,97,92,110,63,126,40,148,24,151,29,130,44,115,65,102,94,81,168,65,258,55,357,47,549,46,682"/>
+<area shape="rect" id="Node000002" href="$classGrassAnimationDialog.html" title=" " alt="" coords="145,55,313,80"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="41,682,43,558,53,380,63,289,78,206,99,137,112,110,126,89,143,77,146,81,130,93,116,113,104,139,84,207,69,290,58,381,48,558,46,682"/>
+<area shape="rect" id="Node000003" href="$classGrassAttribTable.html" title=" " alt="" coords="164,104,293,129"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="41,682,45,567,56,404,67,321,81,245,101,182,113,158,126,139,143,126,163,118,165,123,146,130,130,143,117,160,106,184,86,246,72,322,61,404,50,567,47,683"/>
+<area shape="rect" id="Node000004" href="$classGrassColorTableDialog.html" title=" " alt="" coords="144,153,313,179"/>
+<area shape="poly" id="edge8_Node000000_Node000004" title=" " alt="" coords="42,682,47,575,59,427,70,352,84,283,103,227,126,188,142,176,146,180,130,192,108,229,89,285,75,353,65,428,52,575,47,682"/>
+<area shape="rect" id="Node000005" href="$classGrassDbManagerDialog.html" title=" " alt="" coords="141,203,317,228"/>
+<area shape="poly" id="edge9_Node000000_Node000005" title=" " alt="" coords="42,682,48,585,62,452,73,384,87,323,105,272,126,238,141,226,144,230,130,241,109,275,92,324,78,385,68,452,54,585,48,683"/>
+<area shape="rect" id="Node000006" href="$classGrassFieldCalcDialog.html" title=" " alt="" coords="149,252,309,277"/>
+<area shape="poly" id="edge10_Node000000_Node000006" title=" " alt="" coords="43,682,51,593,66,475,90,362,107,317,126,287,147,272,150,277,130,291,111,320,95,363,71,476,56,594,48,682"/>
+<area shape="rect" id="Node000007" href="$classGrassGeoRectDialog.html" title=" " alt="" coords="151,301,307,327"/>
+<area shape="poly" id="edge11_Node000000_Node000007" title=" " alt="" coords="44,682,53,602,69,499,93,401,108,363,126,336,149,321,152,325,130,340,113,365,98,403,74,500,58,603,49,682"/>
+<area shape="rect" id="Node000008" href="$classGrassHelpDialog.html" title=" " alt="" coords="163,351,294,376"/>
+<area shape="poly" id="edge12_Node000000_Node000008" title=" " alt="" coords="45,682,55,612,73,524,96,440,110,408,126,385,143,373,162,366,164,371,145,378,130,389,115,410,101,442,78,525,61,613,50,683"/>
+<area shape="rect" id="Node000009" href="$classGrassHistogramDialog.html" title=" " alt="" coords="144,400,313,425"/>
+<area shape="poly" id="edge13_Node000000_Node000009" title=" " alt="" coords="41,682,45,630,57,563,68,528,83,494,102,463,126,435,143,423,146,428,130,439,106,466,88,497,73,530,63,565,51,631,47,682"/>
+<area shape="rect" id="Node000010" href="$classGrassHistoryBrowserDialog.html" title=" " alt="" coords="128,449,329,475"/>
+<area shape="poly" id="edge14_Node000000_Node000010" title=" " alt="" coords="44,682,50,638,65,585,89,531,106,506,126,484,143,473,146,477,130,488,110,509,94,533,70,587,56,639,49,682"/>
+<area shape="rect" id="Node000011" href="$classGrassIclassDialog.html" title=" " alt="" coords="159,499,298,524"/>
+<area shape="poly" id="edge15_Node000000_Node000011" title=" " alt="" coords="47,682,56,648,72,608,95,567,126,533,158,517,160,522,130,537,99,571,77,610,61,650,52,683"/>
+<area shape="rect" id="Node000012" href="$classGrassLayoutDialog.html" title=" " alt="" coords="156,548,301,573"/>
+<area shape="poly" id="edge16_Node000000_Node000012" title=" " alt="" coords="52,682,80,631,101,605,127,582,154,569,157,574,129,587,105,608,85,634,57,685"/>
+<area shape="rect" id="Node000013" href="$classGrassMapCalcDialog.html" title=" " alt="" coords="150,597,307,623"/>
+<area shape="poly" id="edge17_Node000000_Node000013" title=" " alt="" coords="62,683,91,656,127,632,155,620,157,625,129,636,94,660,66,687"/>
+<area shape="rect" id="Node000014" href="$classGrassMapExportDialog.html" title=" " alt="" coords="143,647,314,672"/>
+<area shape="poly" id="edge18_Node000000_Node000014" title=" " alt="" coords="92,691,127,681,171,670,173,675,129,686,94,696"/>
+<area shape="rect" id="Node000015" href="$classGrassMapSwipeDialog.html" title=" " alt="" coords="145,696,313,721"/>
+<area shape="poly" id="edge19_Node000000_Node000015" title=" " alt="" coords="94,706,145,706,145,711,94,711"/>
+<area shape="rect" id="Node000016" href="$classGrassMapsetBrowser.html" title=" " alt="" coords="149,745,309,771"/>
+<area shape="poly" id="edge20_Node000000_Node000016" title=" " alt="" coords="94,720,129,730,177,743,176,748,127,735,93,726"/>
+<area shape="rect" id="Node000017" href="$classGrassModelerDialog.html" title=" " alt="" coords="151,795,306,820"/>
+<area shape="poly" id="edge21_Node000000_Node000017" title=" " alt="" coords="66,730,95,756,129,780,160,792,158,797,127,784,91,760,63,733"/>
+<area shape="rect" id="Node000018" href="$classGrassModuleDialog.html" title="Dialog for running any GRASS module via its &#45;&#45;interface&#45;description XML." alt="" coords="154,844,303,869"/>
+<area shape="poly" id="edge22_Node000000_Node000018" title=" " alt="" coords="57,733,85,782,105,808,129,829,155,842,152,847,127,834,102,812,81,785,52,735"/>
+<area shape="rect" id="Node000019" href="$classGrassNetAnalysisDialog.html" title=" " alt="" coords="139,893,318,919"/>
+<area shape="poly" id="edge23_Node000000_Node000019" title=" " alt="" coords="52,734,62,768,77,807,100,846,130,879,151,891,148,896,126,883,95,849,72,809,57,769,47,736"/>
+<area shape="rect" id="Node000020" href="$classGrassNvizDialog.html" title=" " alt="" coords="163,943,294,968"/>
+<area shape="poly" id="edge24_Node000000_Node000020" title=" " alt="" coords="49,735,56,777,70,830,94,883,110,907,130,928,146,939,164,946,162,951,143,943,126,932,106,910,89,886,65,831,51,779,44,736"/>
+<area shape="rect" id="Node000021" href="$classGrassPreferencesDialog.html" title=" " alt="" coords="139,992,318,1017"/>
+<area shape="poly" id="edge25_Node000000_Node000021" title=" " alt="" coords="47,735,51,787,63,852,74,886,88,920,107,950,130,977,148,990,145,994,126,981,102,954,83,922,69,888,58,853,46,787,41,735"/>
+<area shape="rect" id="Node000022" href="$classGrassProfileDialog.html" title=" " alt="" coords="157,1041,300,1067"/>
+<area shape="poly" id="edge26_Node000000_Node000022" title=" " alt="" coords="50,734,61,803,78,891,101,974,115,1006,130,1027,143,1037,158,1044,156,1049,140,1041,126,1031,110,1008,96,976,73,892,55,804,45,735"/>
+<area shape="rect" id="Node000023" href="$classGrassRasterPropsDialog.html" title=" " alt="" coords="139,1091,318,1116"/>
+<area shape="poly" id="edge27_Node000000_Node000023" title=" " alt="" coords="49,735,58,814,75,916,99,1014,113,1051,130,1076,147,1088,144,1093,126,1080,109,1053,93,1015,69,917,53,814,44,736"/>
+<area shape="rect" id="Node000024" href="$classGrassRegionDialog.html" title=" " alt="" coords="155,1140,302,1165"/>
+<area shape="poly" id="edge28_Node000000_Node000024" title=" " alt="" coords="48,735,56,823,71,940,96,1053,111,1096,130,1125,157,1142,154,1147,126,1129,107,1099,90,1054,66,941,51,823,43,735"/>
+<area shape="rect" id="Node000025" href="$classGrassScriptRunner.html" title=" " alt="" coords="157,1189,300,1215"/>
+<area shape="poly" id="edge29_Node000000_Node000025" title=" " alt="" coords="48,735,54,832,68,965,79,1031,93,1092,110,1142,130,1175,143,1185,158,1192,156,1197,140,1190,126,1178,105,1144,88,1093,74,1032,63,965,49,833,42,735"/>
+<area shape="rect" id="Node000026" href="$classGrassStartupDialog.html" title=" " alt="" coords="155,1239,303,1264"/>
+<area shape="poly" id="edge30_Node000000_Node000026" title=" " alt="" coords="47,735,52,842,65,989,76,1063,90,1131,108,1187,130,1224,156,1241,153,1246,126,1228,103,1189,85,1133,70,1064,60,989,47,842,42,736"/>
+<area shape="rect" id="Node000027" href="$classGrassTplotDialog.html" title=" " alt="" coords="161,1288,296,1313"/>
+<area shape="poly" id="edge31_Node000000_Node000027" title=" " alt="" coords="47,735,50,851,62,1013,72,1095,87,1170,106,1232,117,1256,130,1274,144,1285,162,1293,160,1298,142,1290,126,1277,113,1258,101,1234,82,1172,67,1096,57,1013,45,851,42,735"/>
+<area shape="rect" id="Node000028" href="$classGrassVectorPropsDialog.html" title=" " alt="" coords="139,1337,318,1363"/>
+<area shape="poly" id="edge32_Node000000_Node000028" title=" " alt="" coords="46,735,48,859,59,1036,69,1126,84,1209,104,1277,116,1303,130,1323,145,1335,142,1339,126,1326,112,1306,99,1279,79,1210,64,1127,53,1036,43,859,41,735"/>
+<area shape="rect" id="Node000029" href="$classGrassWmsBrowserDialog.html" title=" " alt="" coords="135,1387,322,1412"/>
+<area shape="poly" id="edge33_Node000000_Node000029" title=" " alt="" coords="46,735,47,868,56,1059,66,1158,81,1248,102,1322,115,1351,130,1372,145,1384,142,1389,126,1376,111,1353,97,1324,76,1249,61,1159,50,1060,41,868,41,735"/>
+</map>

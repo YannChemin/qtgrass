@@ -1,0 +1,7 @@
+<map id="src/grassapp.h" name="src/grassapp.h">
+<area shape="rect" id="Node000001" title="Main application window for the qtgrass full&#45;GUI mode." alt="" coords="83,5,199,31"/>
+<area shape="rect" id="Node000002" href="$grassapp_8cpp.html" title=" " alt="" coords="5,79,136,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,43,84,80,80,77,118,39"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title=" " alt="" coords="161,79,266,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,39,204,77,200,80,161,43"/>
+</map>

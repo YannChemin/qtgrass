@@ -1,0 +1,76 @@
+#!/usr/bin/make -f
+# Use bash so we can rely on PIPESTATUS in override_dh_shlibdeps.
+SHELL := /bin/bash
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# Auto-detect GRASS installation (newest version under /usr/local/grass*)
+GRASS_PREFIX := $(shell ls -d /usr/local/grass[0-9]* 2>/dev/null | sort -V | tail -1)
+ifeq ($(GRASS_PREFIX),)
+  GRASS_PREFIX := /usr/local/grass86
+endif
+
+# Allow caller to override the CMake build type.
+# Normal release:  CMAKE_BUILD_TYPE=RelWithDebInfo  (default)
+# Debug package:   CMAKE_BUILD_TYPE=Debug
+CMAKE_BUILD_TYPE ?= RelWithDebInfo
+
+%:
+	dh $@ --buildsystem=cmake
+
+# Grass-addons source tree for the addon extension menus.
+# Use the real invoking user's home (not the debhelper-sandboxed one).
+REAL_HOME := $(shell eval echo ~$(shell whoami))
+GRASS_ADDONS_DIR ?= $(REAL_HOME)/dev/grass-addons
+
+override_dh_auto_configure:
+	dh_auto_configure --buildsystem=cmake -- \
+		-DCMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE) \
+		-DGRASS_PREFIX=$(GRASS_PREFIX) \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
+		-DGRASS_ADDONS_DIR=$(GRASS_ADDONS_DIR)
+
+# For debug builds: skip stripping so GDB gets full symbols.
+# DEB_BUILD_OPTIONS=nostrip also triggers this in standard debhelper,
+# but we make it explicit when CMAKE_BUILD_TYPE=Debug.
+ifeq ($(CMAKE_BUILD_TYPE),Debug)
+override_dh_strip:
+	@echo "Debug build — skipping dh_strip to preserve symbols."
+override_dh_dwz:
+	@echo "Debug build — skipping dh_dwz."
+endif
+
+# dh_auto_install (cmake) places the binary in debian/qtgrass/usr/bin/
+# directly for single-binary packages.  No debian/qtgrass.install needed.
+override_dh_auto_install:
+	dh_auto_install --buildsystem=cmake
+
+# Install additional assets not handled by CMake
+override_dh_install:
+	# Desktop entry
+	install -Dm644 debian/qtgrass.desktop \
+		debian/qtgrass/usr/share/applications/qtgrass.desktop
+	# Application icon
+	install -Dm644 debian/qtgrass.svg \
+		debian/qtgrass/usr/share/icons/hicolor/scalable/apps/qtgrass.svg
+	# MIME type for .gxw workspace files
+	install -Dm644 debian/qtgrass.xml \
+		debian/qtgrass/usr/share/mime/packages/qtgrass.xml
+	# Debug launch wrapper (always installed; useful regardless of build type)
+	install -Dm755 debian/qtgrass-debug \
+		debian/qtgrass/usr/bin/qtgrass-debug
+
+override_dh_installman:
+	dh_installman debian/qtgrass.1
+
+# GRASS libraries use a non-standard SONAME format (libgrass_gis.8.6.so instead
+# of libgrass_gis.so.8.6) that dpkg-shlibdeps cannot parse, producing spurious
+# "can't extract name and version" warnings.  The runtime dependency on GRASS is
+# satisfied by the manually-specified "grass (>= 8.0)" in debian/control.
+# We pipe stderr through grep to suppress only those known-harmless warnings while
+# preserving all other output; PIPESTATUS[0] propagates dh_shlibdeps exit code.
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info 2>&1 \
+	    | grep -Fv "can't extract name and version from library name 'libgrass_" >&2; \
+	    exit $${PIPESTATUS[0]}

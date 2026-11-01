@@ -1,0 +1,9 @@
+<map id="src/tools/grasswmsbrowser.h" name="src/tools/grasswmsbrowser.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="57,5,268,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,33,76,74,73,69,142,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,79,221,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,31,165,65,160,65,160,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="246,79,319,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,28,252,69,250,74,181,33"/>
+</map>

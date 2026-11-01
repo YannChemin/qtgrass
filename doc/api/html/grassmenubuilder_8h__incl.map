@@ -1,0 +1,15 @@
+<map id="src/grassmenubuilder.h" name="src/grassmenubuilder.h">
+<area shape="rect" id="Node000001" title="Builds a QMenuBar from the GRASS menudata.xml definition file." alt="" coords="193,5,366,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,65,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,33,80,80,78,75,239,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,157,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,33,162,75,160,70,253,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,79,273,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="273,33,246,69,242,66,269,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="297,79,368,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="290,29,318,66,314,69,286,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="392,79,479,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="305,28,398,70,396,75,303,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="503,79,554,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="322,28,491,76,489,81,321,33"/>
+</map>

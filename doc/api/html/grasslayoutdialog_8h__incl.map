@@ -1,0 +1,7 @@
+<map id="src/layout/grasslayoutdialog.h" name="src/layout/grasslayoutdialog.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,224,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,79,89,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,33,73,70,69,66,102,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="113,79,241,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,29,160,66,156,70,123,33"/>
+</map>

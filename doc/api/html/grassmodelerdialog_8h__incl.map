@@ -1,0 +1,22 @@
+<map id="src/modeler/grassmodelerdialog.h" name="src/modeler/grassmodelerdialog.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="410,5,654,31"/>
+<area shape="rect" id="Node000002" href="$grassmodel_8h.html" title=" " alt="" coords="299,79,410,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="504,33,397,76,395,71,503,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="513,152,573,177"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="531,31,523,64,523,104,534,139,529,140,517,104,518,64,525,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="532,79,607,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="541,30,559,65,555,68,536,32"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="631,79,759,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="559,28,657,71,654,75,557,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="304,107,94,154,93,149,303,101"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,152,175,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="321,107,189,150,187,145,319,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="200,152,293,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="339,106,277,147,274,142,336,102"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="386,102,501,145,499,150,384,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="318,152,391,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="357,104,357,138,352,138,352,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="415,152,489,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="372,102,426,141,423,146,369,106"/>
+</map>
